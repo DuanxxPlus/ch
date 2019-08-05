@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,35 +13,35 @@
 		<script src="js/common.js"></script>
         <script src="js/jquery-3.1.1.min.js"></script>
     	<script src="js/TouchSlide.1.1.js"></script>
-		
-		<link rel="stylesheet" href="css/date.css">	
-		
-		<link rel="stylesheet" href="css/inner.css">		
-		
-		
+
+		<link rel="stylesheet" href="css/date.css">
+
+		<link rel="stylesheet" href="css/inner.css">
+
+
 	<script type="text/javascript">
 		$(function(){
 			var aTr = document.getElementsByTagName('tr');
-			
+
 			var aDlist = '<tr>' +
 					'<td align="center" valign="top" class="box_td_left">' + '<input type="text" class="left_name" >' + '</td>' +
-					'<td class="box_td_right">' + '<textarea name="" cols="" rows=""></textarea>' 
+					'<td class="box_td_right">' + '<textarea name="" cols="" rows=""></textarea>'
 					+ '<span class="del-list"><a href="javascript:;" class="as delete_btu">删除</a></span></td>' +
 				   '</tr>';
-			
+
 			$('.add-icon').click(function(){
 					$('#addCont').find('tr').css('display','table-row');
-					$('#addCont').find('tbody').append(aDlist);        
+					$('#addCont').find('tbody').append(aDlist);
 			});
-			
+
 			$('.as').live('click',function(){
 					$(this).parents("tr").remove();
-	
+
 			});
-			
+
 		});
-	</script>	
-	
+	</script>
+
 	<script>
 		$(function(){
 
@@ -51,13 +52,13 @@
 				       '<li class="home_add_input"><div class="left">姓名:</div><div class="right"><input class="home_1" name="relname'+ id +'" placeholder="例:张三"></div><div class="clear"></div></li>' +
 						'<li class="home_add_input"><div class="left">称谓:</div><div class="right"><input name="relcode'+ id +'" placeholder="例:兄弟"></div><div class="clear"></div></li>' +
 						'<li class="home_add_input"><div class="left">年龄:</div><div class="right"><input name="relage'+ id +'" placeholder="例:25"></div><div class="clear"></div></li>' +
-						'<li class="home_add_input"><div class="left">联系电话:</div><div class="right"><input name="reltel'+ id +'" placeholder="例:138 0000 0000"></div><div class="clear"></div></li>');	
+						'<li class="home_add_input"><div class="left">联系电话:</div><div class="right"><input name="reltel'+ id +'" placeholder="例:138 0000 0000"></div><div class="clear"></div></li>');
 				id+=1;
 			})
-			
+
 			$('.edu_input_btn').click(function(){
 				var id=($(".edu_1").length)/1;
-				
+
 				$('.edu_add_input').parent().append(
 					   '<li class="edu_add_input"><div class="left">时间段:</div><div class="right"><input class="edu_1" name="time'+ id +'" placeholder="例:2012.09-2016.07"></div><div class="clear"></div></li>' +
 					   '<li><div class="left">学校名称:</div><div class="right"><input name="school'+ id +'" placeholder="例:华南理工大学"></div><div class="clear"></div></li>' +
@@ -66,10 +67,10 @@
 					   '<li><div class="left">学历:</div><div class="right"><input name="geteud'+ id +'" placeholder="例:本科"></div><div class="clear"></div></li>' +
 					   '<li><div class="left">是否全日制:</div><div class="right"><input name="isalltime'+ id +'" placeholder="例:是"></div><div class="clear"></div></li>' +
 					   '<li><div class="left">是否取得毕业证书:</div><div class="right"><input name="isgetedu'+ id +'" placeholder="例:是"></div><div class="clear"></div></li>'
-						);	
+						);
 				id+=1;
 			})
-			
+
 			$('.train_input_btn').click(function(){
 				var id=($(".train_1").length)/1;
 				$('.train_add_input').parent().append(
@@ -77,10 +78,10 @@
 					   '<li><div class="left">培训机构名称:</div><div class="right"><input name="trainname'+ id +'" placeholder="例:北大青鸟"></div><div class="clear"></div></li>' +
 					   '<li ><div class="left">课程名称:</div><div class="right"><input name="trainitem'+ id +'" placeholder="例:信息安全工程师"></div><div class="clear"></div></li>' +
 					   '<li><div class="left">获取证书:</div><div class="right"><input name="traincred'+ id +'" placeholder="例:毕业证"></div><div class="clear"></div></li>'
-						
-						);	
+
+						);
 				id+=1;
-			})	
+			})
 
 			$('.work_input_btn').click(function(){
 				var id=($(".work_1").length)/1;
@@ -94,20 +95,20 @@
 					   '<li><div class="left">年度奖金:</div><div class="right"><input name="workbonus'+ id +'" placeholder="例:1万元"></div><div class="clear"></div></li>' +
 					   '<li><div class="left">股票期权:</div><div class="right"><input name="workoptions'+ id +'" placeholder=""></div><div class="clear"></div></li>' +
 					   '<li><div class="left">证明人姓名:</div><div class="right"><input name="witness'+ id +'" placeholder="例:李四"></div><div class="clear"></div></li>' +
-					   '<li><div class="left">证明人电话:</div><div class="right"><input name="witnesstel'+ id +'" placeholder="例:138 0000 0000"></div><div class="clear"></div></li>	' +					   
-					   '<li><div class="left">离职原因:</div><div class="right"><input name="quit'+ id +'" placeholder=""></div><div class="clear"></div></li>	');	
+					   '<li><div class="left">证明人电话:</div><div class="right"><input name="witnesstel'+ id +'" placeholder="例:138 0000 0000"></div><div class="clear"></div></li>	' +
+					   '<li><div class="left">离职原因:</div><div class="right"><input name="quit'+ id +'" placeholder=""></div><div class="clear"></div></li>	');
 				id+=1;
-			})				
+			})
 
 			$('.delete_btu').live("click",function(){
 				$(this).parent().remove();
 			})
-				
-		}); 
-	</script>  		
-        
+
+		});
+	</script>
+
     </head>
-    <body> 
+    <body>
     	<div id="slideBox" class="slideBox">
           <div class="bd">
               <ul>
@@ -119,26 +120,26 @@
                   </li>
                   <li>
                       <a class="pic" href="#"><img src="images/k3.png" /></a>
-                  </li>				  
+                  </li>
               </ul>
             </div>
-    
+
             <div class="hd">
                 <ul></ul>
             </div>
           </div>
           <script type="text/javascript">
-              TouchSlide({ 
+              TouchSlide({
                   slideCell:"#slideBox",
                   titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-                  mainCell:".bd ul", 
-                  effect:"leftLoop", 
+                  mainCell:".bd ul",
+                  effect:"leftLoop",
                   autoPage:true,//自动分页
                   autoPlay:true //自动播放
               });
-          </script>   
+          </script>
           <div class="clear"></div>
-    
+
 	<div class="xj">
 		<p>康臣药业面试人员登记表</p>
 		<br><br>
@@ -149,10 +150,10 @@
                     <span class="select">基础信息</span>
 					<span>相关经历</span>
                     <span>求职意向</span>
-					
+
                 </div>
                 <div class="clear"></div>
-				
+
                 <div id="con">
                     <div class="con show">
 
@@ -197,7 +198,7 @@
 									   <input name=""  placeholder="">
 								   </div>
 								   <div class="clear"></div>
-							   </li>   
+							   </li>
 							   <li>
 								   <div class="left">
 									   民族:
@@ -207,7 +208,7 @@
 								   </div>
 								   <div class="clear"></div>
 							   </li>
-							   
+
 							   <li>
 								   <div class="left">
 									   婚姻状况:
@@ -228,12 +229,12 @@
 
 								   <div class="clear"></div>
 							   </li>
-	
-							   
-							</ul>
-						</article>	   
 
-							
+
+							</ul>
+						</article>
+
+
 						<div class="xj"> <p>家庭成员</p>	</div>
 						<article class="info">
 							<ul class="home_input ul0 ">
@@ -273,13 +274,13 @@
 								   </div>
 								   <div class="clear"></div>
 							   </li>
-							   
+
 							</ul>
 
-							<input  type="button" onClick="javascript:add();" class="append_btu home_input_btn" value="添加家庭成员"></input>  
+							<input  type="button" onClick="javascript:add();" class="append_btu home_input_btn" value="添加家庭成员"></input>
 
 						</article>
-								 
+
 						<div class="xj"> <p>补充事项</p>	</div>
 						<article class="info">
 							<ul>
@@ -288,7 +289,7 @@
 									  有无亲朋在本公司工作:
 								   </div>
 
-								   
+
 								   <div class="right">
 									   <div class="mask"></div>
 									   <div id="divselect_io">
@@ -300,7 +301,7 @@
 									   </div>
 									   <input name="isfriend" type="hidden" value="" id="inputselect_io"/>
 								   </div>
-								   
+
 
 								   <div class="clear"></div>
 							   </li>
@@ -330,16 +331,16 @@
 									   <input id="enname" placeholder="例:生产部">
 								   </div>
 								   <div class="clear"></div>
-							   </li>	   
-							
-							   
+							   </li>
+
+
 							</ul>
 						</article>
 
 
 
                     </div>
-					
+
                     <div class="con">
 						<div class="xj"> <p>教育经历</p>	</div>
 						<article class="info">
@@ -406,13 +407,13 @@
 									   <input name="isgetedu1" placeholder="例:是">
 								   </div>
 								   <div class="clear"></div>
-							   </li>							   
-							   
-							   
-							   
+							   </li>
+
+
+
 							</ul>
-							
-							<button onClick="javascript:add();" class="append_btu edu_input_btn">添加教育经历</button>    
+
+							<button onClick="javascript:add();" class="append_btu edu_input_btn">添加教育经历</button>
 						</article>
 						<div class="xj"> <p>培训经历</p>	</div>
 						<article class="info">
@@ -453,10 +454,10 @@
 								   </div>
 								   <div class="clear"></div>
 							   </li>
-							   
+
 							</ul>
-							
-							<button onClick="javascript:add();" class="append_btu train_input_btn">添加培训经历</button>    
+
+							<button onClick="javascript:add();" class="append_btu train_input_btn">添加培训经历</button>
 						</article>
 						<div class="xj"> <p>工作经历</p>	</div>
 						<article class="info">
@@ -514,7 +515,7 @@
 									   <input name="worksub1" placeholder="例:500元">
 								   </div>
 								   <div class="clear"></div>
-							   </li>							   
+							   </li>
 							   <li class="add_input">
 								   <div class="left">
 									  年度奖金:
@@ -550,7 +551,7 @@
 									   <input name="witnesstel1" placeholder="例:138 0000 0000">
 								   </div>
 								   <div class="clear"></div>
-							   </li>							   
+							   </li>
 							   <li>
 								   <div class="left">
 									   离职原因:
@@ -559,15 +560,15 @@
 									   <input name="quit1" placeholder="">
 								   </div>
 								   <div class="clear"></div>
-							   </li>								   
-							   
+							   </li>
+
 							</ul>
-							
-							<button onClick="javascript:add();" class="append_btu work_input_btn">添加工作经历</button>    
-						</article>						
+
+							<button onClick="javascript:add();" class="append_btu work_input_btn">添加工作经历</button>
+						</article>
                     </div>
-					
-					
+
+
                     <div class="con">
 						<div class="xj"> <p>求职意向</p>	</div>
 						<article class="info">
@@ -581,13 +582,13 @@
 								   </div>
 								   <div class="clear"></div>
 							   </li>
-	
 
-							   
+
+
 							</ul>
-						</article>	
-                    </div>					
-					
+						</article>
+                    </div>
+
                 </div>
             </div>
             <script>
@@ -597,13 +598,13 @@
                     $('.con').eq(i).show().siblings().hide();
                 });
             </script>
-    
+
     		<div class="foot">
             	<div>
                 	<a type="submit" >提交</a>
                 </div>
             </div>
-            
+
 	</from>
 <script src="js/jquery.min.js" type="text/javascript"></script>
 
@@ -703,12 +704,12 @@
 </script>
 
 	<script>
-    $(function(){		
-        //初始化日期插件	
-        $('#dateinput').date();	
+    $(function(){
+        //初始化日期插件
+        $('#dateinput').date();
     });
     </script>
 
- 
+
     </body>
 </html>
